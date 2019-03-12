@@ -1,0 +1,114 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="aspday2.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    
+    
+<title>University DB</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="css/styles.css" type="text/css">
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <body bgcolor="#ffffff" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+    <table width="780" cellspacing="0" cellpadding="0" border="0" align="center">
+        <tr>
+            <td style="padding-left:25px" bgcolor="#000000" class="logo" height="75">
+                &nbsp;<asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+        <tr>
+            <td height="22" colspan="2" bgcolor="#5aa2ab">
+                <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td height="22" bgcolor="#000000 class="text" align="center">
+                            <asp:Menu ID="Menu1" runat="server" BackColor="#B5C7DE" DataSourceID="SiteMapDataSource2" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#284E98" StaticSubMenuIndent="10px">
+                                <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
+                                <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                                <DynamicMenuStyle BackColor="#B5C7DE" />
+                                <DynamicSelectedStyle BackColor="#507CD1" />
+                                <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
+                                <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                                <StaticSelectedStyle BackColor="#507CD1" />
+                            </asp:Menu>
+                            <asp:SiteMapDataSource ID="SiteMapDataSource2" runat="server" />
+                            <asp:SiteMapPath ID="SiteMapPath1" runat="server" Font-Names="Verdana" Font-Size="0.8em" PathSeparator=" : ">
+                                <CurrentNodeStyle ForeColor="#333333" />
+                                <NodeStyle Font-Bold="True" ForeColor="#990000" />
+                                <PathSeparatorStyle Font-Bold="True" ForeColor="#990000" />
+                                <RootNodeStyle Font-Bold="True" ForeColor="#FF8000" />
+                            </asp:SiteMapPath>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <table width="780" cellspacing="0" cellpadding="0" border="0" align="center">
+        <tr>
+            <td bgcolor="#000000" height="250" valign="top" width="160">
+                <table width="160" cellspacing="0" cellpadding="8" border="0">
+                    <tr>
+                        <td class="text">
+                            <p>
+                                <b>
+                                    Menu<br>
+                                    <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1">
+                                </asp:TreeView>
+                                <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+                                    <br>
+                                </b>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+
+                <asp:Label ID="Label1" runat="server" ForeColor="Red" Text="Count Of Visitors: "></asp:Label>
+                <asp:Label ID="lbl_cnt" runat="server" ForeColor="White"></asp:Label>
+
+            </td>
+            <td bgcolor="#f21a1a" height="250" valign="top">
+                <table width="610" cellspacing="10" cellpadding="0" align="center" border="0">
+                    <tr>
+                        <td valign="top" width="200">
+                            <img src="images/networkcable.gif" width="200" height="160"><br>
+                        </td>
+                        <td valign="top" class="text">
+                            <p>
+                                <br>
+                                <span class="title">Welcome to Mansoura University DB!</span>
+                            </p>
+                            <p>
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </p>
+                            <p>
+                                Need website hosting? We recommend <a href="http://www.lunarpages.com/?id=webdotcom&campaign=tytempls" target="_blank"><b>LunarPages</b></a><br>
+                                <a href="http://www.lunarpages.com/?id=webdotcom&campaign=tytempls" target="_blank"><img src="images/banner.gif" width="234" height="60" border="0" vspace="2"></a>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+    </table>
+    <table width="780" cellspacing="0" cellpadding="0" height="40" border="0" align="center">
+        <tr>
+            <td bgcolor="#FF9900" height="24" class="text" align="center">
+                Copyright &copy;
+                2018 Mansoura University. All rights reserved. Designed by <a href="http://www.playtone.com" target="_blank">Playtone</a>
+            </td>
+        </tr>
+    </table>
+</body>
+        </div>
+    </form>
+</body>
+</html>
